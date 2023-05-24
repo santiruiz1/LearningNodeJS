@@ -5,7 +5,7 @@ const express = require('express');
 
 const app = express(); // Genera una app con express, se puede crear mas de una
 
-ap.get('/', (req,res)=> {
+app.get('/', (req,res)=> {
     res.send({ hi: 'buddy' });
 });
 
