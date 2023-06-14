@@ -27,7 +27,7 @@ passport.use(new GoogleStrategy(
       // Ya existe
       done(null, user);
     } else {
-      const newUser = await new User({
+      await new User({
         googleID: profile.id,
         name: profile.displayName,
         email: profile.emails[0].value

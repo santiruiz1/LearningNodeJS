@@ -7,7 +7,8 @@ const { Schema } = mongoose;
 const userSchema = new Schema({
     googleID: String,
     name: String,
-    email: String
+    email: String,
+    credits: { type: Number, default: 0 } // Set default/initial value
 }); // Está es la estructura que tendrá cada registro de usuario
 
 mongoose.model('users', userSchema);
